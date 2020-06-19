@@ -3,7 +3,6 @@ import {
     Drawer as MUIDrawer,
     ListItem,
     List,
-    ListItemIcon,
     ListItemText
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
