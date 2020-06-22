@@ -22,8 +22,8 @@ export default function MaterialTableDemo() {
       // { title: 'Recording ID', field: 'ID', type: 'numeric' },
       { title: 'File', field: 'name' },
       { title: 'Date', field: 'date' },
-      { title: 'Sample Rate', field: 'sampleRate', type: 'numeric' },
-      { title: 'Duration', field: 'duration', type: 'numeric' }
+      { title: 'Sample Rate (Hz)', field: 'sampleRate', type: 'numeric' },
+      { title: 'Duration (sec)', field: 'duration', type: 'numeric' }
     ],
     data: 
       Object.keys(mockData).map((recordingID) => getRecording(recordingID))

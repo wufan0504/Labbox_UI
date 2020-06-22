@@ -19,7 +19,6 @@ import AppContainer from './AppContainer';
 // import Routes from './Routes';
 import TableSort from './demo';
 import { Typography } from '@material-ui/core';
-import Drawer from './drawer';
 
 
 const content = (
@@ -32,7 +31,7 @@ const content = (
           <TableSort />
           
           <Typography>HI testing 1</Typography>
-          <Drawer />
+          
         </AppContainer>
       </Router>
 

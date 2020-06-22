@@ -1,14 +1,26 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 
-// LABBOX-CUSTOM /////////////////////////////////////////////
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
-import { Home } from '@material-ui/icons';
+import { Home, AccountCircle } from '@material-ui/icons';
+import { IconButton, Menu, MenuItem } from '@material-ui/core';
 
 const ToolBarContent = () => {
+
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+
+  const handleMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
     return (
         <Fragment>
             <Button color="inherit" component={Link} to="/">
@@ -17,10 +29,39 @@ const ToolBarContent = () => {
                     Labbox-ephys
                 </Typography>
             </Button>
-            <span style={{marginLeft: 'auto'}} />
-            {/* <Button color="inherit" component={Link} to="/config" style={{marginLeft: 'auto'}}>Config</Button>
+            {/* <span style={{marginLeft: 'auto'}} /> */}
+            <Button color="inherit" component={Link} to="/config" style={{marginLeft: 'auto'}}>Config</Button>
             <Button color="inherit" component={Link} to="/prototypes">Prototypes</Button>
-            <Button color="inherit" component={Link} to="/about">About</Button> */}
+            <Button color="inherit" component={Link} to="/about">About</Button>
+            
+            <IconButton
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleMenu}
+                color="inherit"
+              >
+                <AccountCircle />
+            </IconButton>
+            <Menu
+                id="menu-appbar"
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={open}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <MenuItem onClick={handleClose}>My account</MenuItem>
+                <MenuItem onClick={handleClose}>Logout</MenuItem>
+              </Menu>
 
         </Fragment>
     )
