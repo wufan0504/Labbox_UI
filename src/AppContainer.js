@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import { Home, AccountCircle } from '@material-ui/icons';
 import { IconButton, Menu, MenuItem } from '@material-ui/core';
-import SwitchThemeButton from './switchTheme'
+import SwitchThemeButton from './ThemeSwitch'
 
 const ToolBarContent = () => {
 

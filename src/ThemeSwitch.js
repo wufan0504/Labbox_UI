@@ -2,7 +2,7 @@ import React from 'react';
 
 import { connect } from 'react-redux';
 import { Switch } from '@material-ui/core';
-import { switchTheme } from './Action/Action';
+import { switchTheme } from './Actions/switchThemeAction';
 
 
 const SwitchThemeButton = (props) => {

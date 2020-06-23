@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 // styling
-import ThemeOptionProvider from './themeOptions';
+import ThemeOptionProvider from './ThemeOptionProvider';
 import './index.css';
 // import './styles.css';
 
@@ -16,14 +16,14 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux'
 
 // reducer
-import themeReducer from './Reducer/Reducer';
+import themeReducer from './Reducers/themeReducer';
 
 // The main app container, including the app bar
 import AppContainer from './AppContainer';
 
 // Custom routes
 // import Routes from './Routes';
-import TableSort from './demo';
+import RecordingTableSorted from './RecordingTableSorted';
 import { CssBaseline } from '@material-ui/core';
 
 // Create the store
@@ -40,7 +40,7 @@ const content = (
           <Router>
             <AppContainer >
               {/* <Routes /> */}
-              <TableSort />
+              <RecordingTableSorted />
                             
             </AppContainer>
           </Router>

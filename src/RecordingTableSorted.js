@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MaterialTable from 'material-table';
 import mockData from './mockData';
 
@@ -15,9 +15,9 @@ const getRecording = (recordingID) => {
   );  
 };
 
-export default function MaterialTableDemo() {
+const RecordingTableSorted = () => {
   
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     columns: [
       // { title: 'Recording ID', field: 'ID', type: 'numeric' },
       { title: 'File', field: 'name' },
@@ -75,3 +75,5 @@ export default function MaterialTableDemo() {
     />
   );
 }
+
+export default RecordingTableSorted;

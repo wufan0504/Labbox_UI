@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import mockData from './mockData';
 import { Typography } from '@material-ui/core';
 
-const RecordingView = (props) => {
+const TimeSeriesView = (props) => {
     const { match } = props;
     const { params } = match;
     const { recordingID } = params;
@@ -22,4 +22,4 @@ const RecordingView = (props) => {
     ) 
 };
 
-export default RecordingView;
+export default TimeSeriesView;

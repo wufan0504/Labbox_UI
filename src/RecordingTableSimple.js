@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     }
 });
 
-const RecordingTable = () => {
+const RecordingTableSimple = () => {
     const classes = useStyles()
     const [recordingList, setRecordingList] = useState(mockData)
 
@@ -45,4 +45,4 @@ const RecordingTable = () => {
     )
 }
 
-export default RecordingTable;
+export default RecordingTableSimple;
