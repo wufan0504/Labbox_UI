@@ -1,36 +1,22 @@
-import React, { useState } from 'react';
-import MaterialTable from 'material-table';
-import mockData from './mockData';
-
-
-const getRecording = (recordingID) => {
-
-  const {name, date, sampleRate, duration} = mockData[recordingID]
-  
-  return (
-    {
-      name: name, date: date, sampleRate: sampleRate, duration: duration
-    }
-    
-  );  
-};
+import React, { useState } from "react";
+import MaterialTable from "material-table";
+import mockData from "./mockData";
+import { getRecording } from "./RecordingView";
 
 const RecordingTableSorted = () => {
-  
   const [state, setState] = useState({
     columns: [
       // { title: 'Recording ID', field: 'ID', type: 'numeric' },
-      { title: 'File', field: 'name' },
-      { title: 'Date', field: 'date' },
-      { title: 'Sample Rate (Hz)', field: 'sampleRate', type: 'numeric' },
-      { title: 'Duration (sec)', field: 'duration', type: 'numeric' }
+      { title: "File", field: "name" },
+      { title: "Date", field: "date" },
+      { title: "Sample Rate (Hz)", field: "sampleRate" },
+      { title: "Duration (sec)", field: "duration" },
+      { title: "Status", field: "status" },
     ],
-    data: 
-      Object.keys(mockData).map((recordingID) => getRecording(recordingID))
+    data: Object.keys(mockData).map((recordingID) => getRecording(recordingID)),
   });
 
   return (
-    
     <MaterialTable
       title="Recording Database"
       columns={state.columns}
@@ -74,6 +60,6 @@ const RecordingTableSorted = () => {
       }}
     />
   );
-}
+};
 
 export default RecordingTableSorted;
