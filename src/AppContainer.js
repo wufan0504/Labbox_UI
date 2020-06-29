@@ -33,7 +33,8 @@ const ToolBarContent = () => {
             {/* <span style={{marginLeft: 'auto'}} /> */}
             
             <SwitchThemeButton />
-            <Button color="inherit" component={Link} to="/config" style={{marginLeft: 'auto'}}>Config</Button>
+            <Button color="inherit" component={Link} to="/database" style={{marginLeft: 'auto'}}>Database</Button>
+            <Button color="inherit" component={Link} to="/config">Config</Button>
             <Button color="inherit" component={Link} to="/prototypes">Prototypes</Button>
             <Button color="inherit" component={Link} to="/about">About</Button>
             
@@ -63,7 +64,7 @@ const ToolBarContent = () => {
               >
                 <MenuItem onClick={handleClose}>Profile</MenuItem>
                 <MenuItem onClick={handleClose}>My account</MenuItem>
-                <MenuItem onClick={handleClose}>Logout</MenuItem>
+                <MenuItem onClick={handleClose} component={Link} to="/">Logout</MenuItem>
               </Menu>
 
         </Fragment>
@@ -74,9 +75,9 @@ const ToolBarContent = () => {
 const AppContainer = (props) => {
     return (
         <div className={"TheAppBar"}>
-            <AppBar position="static">
+            <AppBar position="static" >
                 <Toolbar>
-                    <ToolBarContent />
+                    <ToolBarContent/>
                 </Toolbar>
             </AppBar>
             <div style={{padding: 30}}>

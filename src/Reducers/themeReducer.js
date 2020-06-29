@@ -1,16 +1,15 @@
 const initState = {
-    darkMode: false
-}
+  darkMode: false,
+};
 
 const themeReducer = (state = initState, action) => {
-    switch (action.type) {
-        case "SWITCH_THEME":
-            return { darkMode: !state.darkMode };
-        
-        default:
+  switch (action.type) {
+    case "SWITCH_THEME":
+      return { darkMode: !state.darkMode };
 
-            return state;               
-    }
+    default:
+      return state;
+  }
 };
 
 export default themeReducer;

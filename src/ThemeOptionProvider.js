@@ -18,6 +18,13 @@ const ThemeOptionProvider = ({ children }) => {
   const theme = createMuiTheme({
     palette: {
       type: isDark ? "dark" : "light",
+      primary: {
+        main: "#3f50b5",
+      },
+      secondary: {
+        light: '#0066ff',
+        main: "#f44336",
+      },
     },
   });
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;

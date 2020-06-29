@@ -21,9 +21,11 @@ import themeReducer from "./Reducers/themeReducer";
 import AppContainer from "./AppContainer";
 
 // Custom routes
+import Routes from "./Routes";
+
 // import Routes from './Routes';
 import { CssBaseline } from "@material-ui/core";
-import RecordingView from "./RecordingView";
+
 
 // Create the store
 const store = createStore(themeReducer);
@@ -34,9 +36,8 @@ const content = (
     <ThemeOptionProvider>
       <CssBaseline />
       <Router>
-        <AppContainer>
-          {/* <Routes /> */}
-          <RecordingView />
+        <AppContainer >
+          <Routes />
         </AppContainer>
       </Router>
     </ThemeOptionProvider>

@@ -1,5 +1,7 @@
 import imgOne from "./screenshots/KD.png";
-import imgTwo from "./screenshots/Majun.png";
+import imgOneGif from "./screenshots/KD.gif";
+import imgTwo from "./screenshots/MJ.png";
+import imgTwoGif from "./screenshots/MJ.gif";
 
 export default {
   "1": {
@@ -8,7 +10,8 @@ export default {
     sampleRate: 30000,
     duration: 1600,
     status: "spikesorted",
-    rawView: imgOne,
+    rawView: imgOneGif,
+    
   },
   "2": {
     name: "AP-64-8",
@@ -31,31 +34,31 @@ export default {
     date: "Jun 2020",
     sampleRate: 30000,
     duration: 36000,
-    status: "not spikesorted",
+    status: "Raw data",
     rawView: imgTwo,
   },
   "5": {
-    name: "MJ-tetrode-4",
-    date: "May 2017",
-    sampleRate: 1250,
-    duration: 4000,
-    status: "LFP only",
-    rawView: imgTwo,
+    name: "GB-128-1",
+    date: "Nov 2019",
+    sampleRate: 30000,
+    duration: 24005,
+    status: "Raw data",
+    rawView: imgOne,
   },
   "6": {
     name: "MJ-tetrode-5",
     date: "May 2017",
     sampleRate: 1250,
     duration: 6000,
-    status: "LFP only",
-    rawView: imgTwo,
+    status: "Raw data (LFP only)",
+    rawView: imgTwoGif,
   },
   "7": {
     name: "MJ-tetrode-6",
     date: "May 2017",
     sampleRate: 1250,
     duration: 1000,
-    status: "LFP only",
+    status: "Raw data (LFP only)",
     rawView: imgTwo,
   },
   "8": {
@@ -63,7 +66,7 @@ export default {
     date: "May 2017",
     sampleRate: 1250,
     duration: 1000,
-    status: "LFP only",
+    status: "Raw data (LFP only)",
     rawView: imgTwo,
   },
   "9": {
@@ -71,7 +74,7 @@ export default {
     date: "May 2017",
     sampleRate: 1250,
     duration: 1000,
-    status: "LFP only",
+    status: "Raw data (LFP only)",
     rawView: imgTwo,
   },
 };
