@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import { Home, AccountCircle } from '@material-ui/icons';
-import { IconButton, Menu, MenuItem } from '@material-ui/core';
+import { IconButton, Menu, MenuItem, Hidden } from '@material-ui/core';
 import SwitchThemeButton from './ThemeSwitch'
 
 const ToolBarContent = () => {
@@ -26,9 +26,11 @@ const ToolBarContent = () => {
         <Fragment>
             <Button color="inherit" component={Link} to="/">
                 <Home />&nbsp;
-                <Typography variant="h6">
-                    Labbox-ephys
-                </Typography>
+                <Hidden only="xs">
+                  <Typography variant="h6">
+                      Labbox-ephys
+                  </Typography>
+                </Hidden>
             </Button>
             {/* <span style={{marginLeft: 'auto'}} /> */}
             

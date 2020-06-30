@@ -22,6 +22,7 @@ const useStyles = makeStyles({
   cardContent: {
     position: "relative",
     padding: "5px",
+    
   },
   overlay: {
     position: "absolute",
